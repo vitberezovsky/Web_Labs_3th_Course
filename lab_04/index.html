@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/buttons.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Component</title>
+</head>
+
+<style>
+    .cContainer {
+    border: solid rgb(244, 244, 244);
+    border-radius: 10px;
+    background-color: rgb(224, 224, 225);
+    width: 240px;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cImage {
+    width: 230px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.cTitle {
+    text-align: center;
+    color: #302d33;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.cProperties {
+    text-align: center;
+    color: #3a343b;
+    font-size: smaller;
+}
+
+.bContainer {
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    margin-left: 10%;
+}
+
+.bEdit:hover, .bDelete:hover {
+    box-shadow: 0 0 5px;
+}
+
+.bEdit {
+    border: solid rgb(27, 166, 241);
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    color: rgb(27, 166, 241);
+    width: 80px;
+    height: 35px;
+}
+
+.bDelete {
+    border: solid rgb(255, 77, 136);
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    color: rgb(255, 77, 136);
+    margin-left: 5%;
+    width: 95px;
+    height: 35px;
+}
+</style>
+
+<body>
+    <div class="cContainer">
+        <img class="cImage" src="1.webp">
+        <p class="cTitle">Клавіатура дротова Real-El 8000 Comfort Backlit USB</p>
+        <p class="cProperties">Тип підключення: дротове</p>
+        <p class="cProperties">Інтерфейс підключення з ПК: USB</p>
+        <p class="cProperties">Тип клавіш: мембранні</p>
+        <p class="cProperties">Колір корпусу: чорний</p>
+
+        <div class="bContainer">
+            <button class="bEdit">Edit</button>
+			<button class="bDelete">Delete</button>
+        </div>
+    </div>
+</body>
+</html>

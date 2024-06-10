@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .message {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+        .message.user1 {
+            flex-direction: row-reverse;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 10px;
+        }
+        .message-content {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .message-content.user1 {
+            background-color: #d1e7dd;
+        }
+        .message-content.user2 {
+            background-color: #f8d7da;
+        }
+        .message-content::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            background: inherit;
+        }
+        .message.user1 .message-content::after {
+            left: -5px;
+            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        }
+        .message.user2 .message-content::after {
+            right: -5px;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .message-content {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="message user1">
+            <div class="avatar"></div>
+            <div class="message-content user1">
+                <div class="message-header">
+                    <span>John</span>
+                    <span>10:30 AM</span>
+                </div>
+                <div class="message-body">
+                    Hello! How are you?
+                </div>
+            </div>
+        </div>
+        <div class="message user2">
+            <div class="avatar"></div>
+            <div class="message-content user2">
+                <div class="message-header">
+                    <span>Jane</span>
+                    <span>10:32 AM</span>
+                </div>
+                <div class="message-body">
+                    I'm good, thanks! How about you?
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

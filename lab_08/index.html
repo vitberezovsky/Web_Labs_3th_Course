@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #003f40;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #005f60;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header nav {
+            display: flex;
+            gap: 15px;
+        }
+        .header nav a {
+            color: #cccccc;
+            text-decoration: none;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .info div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            margin-right: 10px;
+        }
+
+        /* Responsive styles */
+        @media (min-width: 600px) and (max-width: 959px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+        @media (min-width: 960px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+        @media (max-width: 599px) {
+            .container {
+                max-width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Articles</a>
+                <span>|</span>
+            </nav>
+        </div>
+        <div class="content">
+            <div>
+                <div class="title">Flexbox - progressive technology for web pages layouts</div>
+            </div>
+            <div class="info">
+                <div>
+                    <div class="avatar"></div>
+                    <div>
+                        <div>Updated</div>
+                        <div>Jan 15, 2024</div>
+                    </div>
+                </div>
+                <div>
+                    <div>Author</div>
+                    <div>Georg Graham</div>
+                </div>
+                <div>
+                    <div>50 Comments</div>
+                    <div><a href="#" style="color: #ffffff;">Go to comments</a></div>
+                </div>
+                <div>
+                    <div>Published</div>
+                    <div>Jan 05, 2024</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Обернута рамка для фотографії</title>
+<style>
+  .frame {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 50px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    rotate: 45deg;
+  }
+  
+  .photo {
+    width: 90%; 
+    height: 90%; 
+    rotate: 315deg;
+  }
+</style>
+</head>
+<body>
+
+<div class="frame">
+  <img src="1.jpeg" alt="Обручки" class="photo">
+</div>
+
+</body>
+</html>

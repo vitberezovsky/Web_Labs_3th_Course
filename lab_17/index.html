@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Blocks</title>
+    <style>
+        .block {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .deleteButton {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="blocks">
+        <div class="block">
+            <button class="deleteButton">×</button>
+            <h2>Header 1</h2>
+            <p>Параграф 1</p>
+        </div>
+        <div class="block">
+            <button class="deleteButton">×</button>
+            <h2>Header 2</h2>
+            <p>Параграф 2</p>
+        </div>
+        <div class="block">
+            <button class="deleteButton">×</button>
+            <h2><Header></Header> 3</h2>
+            <p>Параграф 3</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

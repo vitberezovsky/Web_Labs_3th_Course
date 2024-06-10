@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .clock {
+            width: 300px;
+            height: 300px;
+            border: 10px solid #333;
+            border-radius: 50%;
+            position: relative;
+        }
+        .hand {
+            width: 50%;
+            height: 6px;
+            background: #333;
+            position: absolute;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: transform 0.05s cubic-bezier(0.4, 2.3, 0.3, 1);
+        }
+        .hand.hour {
+            height: 8px;
+        }
+        .center {
+            width: 12px;
+            height: 12px;
+            background: #333;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hand hour" id="hour"></div>
+        <div class="hand minute" id="minute"></div>
+        <div class="center"></div>
+    </div>
+    <script>
+        function setClock() {
+            const now = new Date();
+            const seconds = now.getSeconds();
+            const minutes = now.getMinutes();
+            const hours = now.getHours();
+
+            const secondRatio = seconds / 60;
+            const minuteRatio = (secondRatio + minutes) / 60;
+            const hourRatio = (minuteRatio + hours) / 12;
+
+            document.getElementById('minute').style.transform = `rotate(${minuteRatio * 360}deg)`;
+            document.getElementById('hour').style.transform = `rotate(${hourRatio * 360}deg)`;
+        }
+
+        setInterval(setClock, 1000);
+
+        // Initialize the clock on page load
+        setClock();
+    </script>
+</body>
+</html>

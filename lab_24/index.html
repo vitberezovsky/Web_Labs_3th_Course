@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('a[href^="https://"]').attr('target', '_blank');
+        });
+    </script>
+
+<style>
+    .head {
+        background-color: green;
+    }
+    .inner {
+        font-size: 35px;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $('h2.head').css('background-color', 'green');
+        $('h2.head .inner').css('font-size', '35px');
+    });
+</script>
+</head>
+<body>
+    <a href="https://example.com">Example Secure Link</a>
+    <a href="http://example.com">Example Non-Secure Link</a>
+
+    <h2 class="head">header1</h2>
+    <h2 class="head">header2 <span class="inner">inner elem1</span></h2>
+    <h2>header3</h2>
+    <h2 class="head">header4 <span>inner elem2</span></h2>
+    <h2>header5</h2>
+</body>
+</html>
